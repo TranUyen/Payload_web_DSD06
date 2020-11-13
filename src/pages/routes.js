@@ -34,6 +34,28 @@ export const routes = [
     component: () => <div>PayloadManagement</div>,
   },
   {
+    path: '/payload-management',
+    component: () => <div>Quản lý Payload</div>,
+  },
+  {
+    path: '/payload-drone',
+    component: () => <div>Payload - Drone</div>,
+  },
+  {
+    path: '/payload-configuration',
+    component: () => <div>Cấu hình Payload</div>,
+  },
+  {
+    path: '/payload-maintenance',
+    component: () => <div>Bảo dưỡng Payload</div>,
+  },
+  {
+    path: '/payload-statistic',
+    component: () => <div>Thống kê Payload</div>,
+  },
+
+
+  {
     path: '/metadata',
     component: () => <div>Meta Data</div>,
   },
