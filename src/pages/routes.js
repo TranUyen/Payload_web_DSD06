@@ -2,7 +2,11 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
-import ListPayload from './Payload/PayloadManagement/List'
+import ListPayload from './Payload/PayloadManagement/List';
+import PayloadMaintenance from './Payload/PayloadMaintenance';
+import PayloadSetting from './Payload/PayloadSetting';
+import PayloadStatistic from './Payload/PayloadStatistic';
+
 
 export const routes = [
   {
@@ -44,15 +48,15 @@ export const routes = [
   },
   {
     path: '/payload-configuration',
-    component: () => <div>Cấu hình Payload</div>,
+    component: PayloadSetting,
   },
   {
     path: '/payload-maintenance',
-    component: () => <div>Bảo dưỡng Payload</div>,
+    component: PayloadMaintenance,
   },
   {
     path: '/payload-statistic',
-    component: () => <div>Thống kê Payload</div>,
+    component: PayloadStatistic,
   },
 
 
