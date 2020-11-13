@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
+import ListPayload from './Payload/PayloadManagement/List'
 
 export const routes = [
   {
@@ -35,7 +36,7 @@ export const routes = [
   },
   {
     path: '/payload-management',
-    component: () => <div>Quản lý Payload</div>,
+    component: ListPayload,
   },
   {
     path: '/payload-drone',
