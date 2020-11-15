@@ -63,8 +63,8 @@ const List = ({ history }) => {
       render: (text, record) => (
   
         <Space size="small" >
-          <Button type="link" onClick={() => history.push('/dashboard')}>Cấu hình</Button>
-          <Button type="link">Sửa</Button>
+          <Button type="link" onClick={() => history.push('/payload-configuration')}>Cấu hình</Button>
+          <Button type="link" onClick={() => history.push('/edit-payload')}>Sửa</Button>
           <Button danger type="text">Xóa</Button>
         </Space>
       ),

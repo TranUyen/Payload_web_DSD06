@@ -49,12 +49,12 @@ export const sidebarMenu = [
         icon: 'fal fa-monitor-heart-rate',
         route: '/payload-management',
       },
-      {
+     /*  {
         key: 'PayloadSetting',
         heading: 'Cấu hình payload',
         icon: 'fa fa-cog',
         route: '/payload-configuration',
-      },
+      }, */
       {
         key: 'PayloadStatistic',
         heading: 'Thống kê Payload',

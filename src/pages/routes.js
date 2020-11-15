@@ -6,7 +6,7 @@ import ListPayload from './Payload/PayloadManagement/List';
 import PayloadMaintenance from './Payload/PayloadMaintenance';
 import PayloadSetting from './Payload/PayloadSetting';
 import PayloadStatistic from './Payload/PayloadStatistic';
-
+import EditPayload from './Payload/PayloadManagement/Edit';
 
 export const routes = [
   {
@@ -41,6 +41,10 @@ export const routes = [
   {
     path: '/payload-management',
     component: ListPayload,
+  },
+  {
+    path: '/edit-payload',
+    component: EditPayload,
   },
   {
     path: '/payload-drone',
