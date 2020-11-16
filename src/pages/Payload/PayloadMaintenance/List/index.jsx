@@ -8,17 +8,30 @@ import { SearchOutlined } from '@ant-design/icons';
 const PayloadMaintenance = ({ history }) => {
   const dataSource = [
     {
-      key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
+      stt: '1',
+      time: '20-11-2020',
+      location: 'Văn phòng đê 01',
+      namePayload: 'Sensor T',
+      payloadId: 'TT73623',
+      des: '',
     },
     {
-      key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
+      stt: '1',
+      time: '21-11-2020',
+      location: 'Văn phòng đê 01',
+      namePayload: 'Camera cảm biến nhiệt',
+      payloadId: 'PN62523',
+      des: '',
     },
+    {
+      stt: '1',
+      time: '22-11-2020',
+      location: 'Văn phòng đê 01',
+      namePayload: 'Camera SONY 04628',
+      payloadId: 'SN04628',
+      des: '',
+    },
+
   ];
   
   let visible = false ;
@@ -33,28 +46,28 @@ const PayloadMaintenance = ({ history }) => {
   const columns = [
     {
       title: 'STT',
-      dataIndex: 'key',
-      key: 'name',
+      dataIndex: 'stt',
+      key: 'stt',
     },
     {
       title: 'Thời gian',
-      dataIndex: 'age',
-      key: 'age',
+      dataIndex: 'time',
+      key: 'time',
     },
     {
       title: 'Địa điểm',
-      dataIndex: 'age',
-      key: 'age',
+      dataIndex: 'location',
+      key: 'location',
     },
     {
       title: 'Tên Payload',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'namePayload',
+      key: 'namePayload',
     },
     {
       title: 'Mã Payload',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'payloadId',
+      key: 'payloadId',
     },
     {
       title: 'Mô tả',

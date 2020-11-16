@@ -8,16 +8,28 @@ import { SearchOutlined } from '@ant-design/icons';
 const List = ({ history }) => {
   const dataSource = [
     {
-      key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
+      stt: '1',
+      ID: 'TT73623',
+      name: 'Sensor T',
+      type: 'Sensor',
+      des: '',
+      status: ''
     },
     {
-      key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
+      stt: '2',
+      ID: 'PN62523',
+      name: 'Camera cảm biến nhiệt',
+      type: 'Camera',
+      des: '',
+      status: ''
+    },
+    {
+      stt: '3',
+      ID: 'SN04628',
+      name: 'Camera SONY 04628',
+      type: 'Camera',
+      des: '',
+      status: ''
     },
   ];
   
@@ -32,29 +44,34 @@ const List = ({ history }) => {
 
   const columns = [
     {
+      title: 'STT',
+      dataIndex: 'stt',
+      key: 'stt',
+    },
+    {
       title: 'Mã ',
       dataIndex: 'ID',
-      key: 'name',
+      key: 'ID',
     },
     {
       title: 'Tên',
-      dataIndex: 'age',
-      key: 'age',
+      dataIndex: 'name',
+      key: 'name',
     },
     {
       title: 'Loại',
-      dataIndex: 'age',
-      key: 'age',
+      dataIndex: 'type',
+      key: 'type',
     },
     {
       title: 'Mô tả',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'des',
+      key: 'des',
     },
     {
       title: 'Trạng thái',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'status',
+      key: 'status',
     },
     {
       title: 'Action',

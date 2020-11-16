@@ -90,23 +90,23 @@ export const routes = [
     component: PayloadStatistic,
   },
   {
-    path: '/payload-statistic/frequency',
+    path: '/payload-statistic-frequency',
     component: PayloadStatisticFrequency,
   },
   {
-    path: '/payload-statistic/time',
+    path: '/payload-statistic-time',
     component: PayloadStatisticTime,
   },
   {
-    path: '/payload-statistic/moment',
+    path: '/payload-statistic-moment',
     component: PayloadStatisticMoment,
   },
   {
-    path: '/payload-statistic/status',
+    path: '/payload-statistic-status',
     component: PayloadStatisticStatus,
   },
   {
-    path: '/payload-statistic/drone',
+    path: '/payload-statistic-drone',
     component: PayloadStatisticDrone,
   },
 
