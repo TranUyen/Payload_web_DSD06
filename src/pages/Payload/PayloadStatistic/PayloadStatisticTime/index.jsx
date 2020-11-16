@@ -105,10 +105,10 @@ const PayloadStatisticTime = ({ history }) => {
         </div>
 
         <Form
-            layout="horizontal"
-            initialValues={{ size: componentSize }} className="searchtype"
-            onValuesChange={onFormLayoutChange}
-            size={componentSize}
+            // layout="horizontal"
+            // initialValues={{ size: componentSize }} className="searchtype"
+            // onValuesChange={onFormLayoutChange}
+            // size={componentSize}
         >
           <Row justify="space-around">
             <Col span={4}>
