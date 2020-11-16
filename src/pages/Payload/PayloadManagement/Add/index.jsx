@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Select} from 'antd';
-import StyleEdit from './index.style';
+import StyleEdit from '../Edit/index.style';
 const layout = {
   labelCol: { span: 5 },
   wrapperCol: { span: 10 },
@@ -9,7 +9,7 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-const EditPayload = ({ history }) => {
+const AddPayload = ({ history }) => {
   const onFinish = values => {
     console.log('Success:', values);
   };
@@ -21,7 +21,7 @@ const EditPayload = ({ history }) => {
   return (
     <StyleEdit>
       <div className="searchtype">
-        <a onClick={() => history.push('/payload-management')}>Quản lý Payload</a> <span>/</span> <a onClick={() => history.push('/edit-payload')}>Chỉnh sửa Payload</a>
+        <a onClick={() => history.push('/payload-management')}>Quản lý Payload</a> <span>/</span> <a onClick={() => history.push('/add-payload')}>Thêm Payload</a>
       </div>
 
       <Form
@@ -77,4 +77,4 @@ const EditPayload = ({ history }) => {
     </StyleEdit>
   );
 };
-export default EditPayload;
+export default AddPayload;

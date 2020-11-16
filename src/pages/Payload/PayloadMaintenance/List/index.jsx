@@ -1,11 +1,11 @@
 import React from 'react';
 import { Table, Space, Input, Form, Select, Modal, DatePicker, Row, Col} from 'antd';
 import { Button } from 'antd';
-import StyleList from './index.style';
+import StyleList from '../index.style';
 import { useState } from 'react';
 import { SearchOutlined } from '@ant-design/icons';
 
-const List = ({ history }) => {
+const PayloadMaintenance = ({ history }) => {
   const dataSource = [
     {
       key: '1',
@@ -32,27 +32,32 @@ const List = ({ history }) => {
 
   const columns = [
     {
-      title: 'Mã ',
-      dataIndex: 'ID',
+      title: 'STT',
+      dataIndex: 'key',
       key: 'name',
     },
     {
-      title: 'Tên',
+      title: 'Thời gian',
       dataIndex: 'age',
       key: 'age',
     },
     {
-      title: 'Loại',
+      title: 'Địa điểm',
       dataIndex: 'age',
       key: 'age',
     },
     {
-      title: 'Mô tả',
+      title: 'Tên Payload',
       dataIndex: 'address',
       key: 'address',
     },
     {
-      title: 'Trạng thái',
+      title: 'Mã Payload',
+      dataIndex: 'address',
+      key: 'address',
+    },
+    {
+      title: 'Mô tả',
       dataIndex: 'address',
       key: 'address',
     },
@@ -61,10 +66,8 @@ const List = ({ history }) => {
       key: 'operation',
       width: 100,
       render: (text, record) => (
-  
         <Space size="small" >
-          <Button type="link" onClick={() => history.push('/payload-configuration')}>Cấu hình</Button>
-          <Button type="link" onClick={() => history.push('/edit-payload')}>Sửa</Button>
+          <Button type="link" onClick={() => history.push('/edit-schedule')}>Sửa</Button>
           <Button danger type="text">Xóa</Button>
         </Space>
       ),
@@ -78,7 +81,7 @@ const List = ({ history }) => {
   return (
     <StyleList>
       <div>
-        <div>Quản lý Payload</div>
+        <div>Lịch bảo dưỡng</div>
         <Form
           layout="horizontal"
           initialValues={{ size: componentSize }} className="searchtype"
@@ -87,24 +90,16 @@ const List = ({ history }) => {
         >
           <Row justify="space-around">
             <Col span={4}>
-              <Form.Item label="Tên">
-                <Input />
+              <Form.Item label="Từ ngày">
+                <DatePicker />
               </Form.Item>
             </Col>
             <Col span={4}>
-              <Form.Item label="Loại">
-                <Select>
-                  <Select.Option value="demo">Demo</Select.Option>
-                </Select>
+              <Form.Item label="Đến ngày">
+               <DatePicker></DatePicker>
               </Form.Item>
             </Col>
-            <Col span={4}>
-              <Form.Item label="Trạng thái">
-                <Select>
-                  <Select.Option value="demo">Demo</Select.Option>
-                </Select>
-              </Form.Item>
-            </Col>
+
             <Col span={4}>
               <Button type="primary" icon={<SearchOutlined />}>
                 Tìm kiếm
@@ -112,7 +107,7 @@ const List = ({ history }) => {
             </Col>
           </Row>
         </Form>
-        <Button type="primary" className="buttontype" onClick={() => history.push('/add-payload')}>Thêm</Button>
+        <Button type="primary" className="buttontype" onClick={() => history.push('/add-schedule')}>Thêm</Button>
         <Table dataSource={dataSource} columns={columns} />;
         </div>
 
@@ -130,4 +125,4 @@ const List = ({ history }) => {
   );
 };
 
-export default List;
+export default PayloadMaintenance;

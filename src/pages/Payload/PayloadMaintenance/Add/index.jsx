@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Select} from 'antd';
-import StyleEdit from './index.style';
+import { Form, Input, Button, Select, DatePicker} from 'antd';
+import StyleEdit from '../index.style';
 const layout = {
   labelCol: { span: 5 },
   wrapperCol: { span: 10 },
@@ -9,7 +9,9 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-const EditPayload = ({ history }) => {
+const { TextArea } = Input;
+
+const AddSchedule = ({ history }) => {
   const onFinish = values => {
     console.log('Success:', values);
   };
@@ -21,7 +23,7 @@ const EditPayload = ({ history }) => {
   return (
     <StyleEdit>
       <div className="searchtype">
-        <a onClick={() => history.push('/payload-management')}>Quản lý Payload</a> <span>/</span> <a onClick={() => history.push('/edit-payload')}>Chỉnh sửa Payload</a>
+        <a onClick={() => history.push('/payload-maintenance')}>Lịch bảo dưỡng Payload</a> <span>/</span> <a onClick={() => history.push('/edit-payload')}>Thêm lịch bảo dưỡng</a>
       </div>
 
       <Form
@@ -33,35 +35,41 @@ const EditPayload = ({ history }) => {
       >
         <h3 className="searchtype"  >Thông tin chi tiết</h3>
         <Form.Item
-          label="Tên"
-          name="username"
+          label="Thời gian"
+          name="time"
           rules={[{ required: true, message: 'Please input your username!' }]}
         >
-          <Input />
+          <DatePicker/>
         </Form.Item>
 
         <Form.Item
-          label="Loại"
-          name="tilting"
+          label="Địa điểm"
+          name="location"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Mô tả"
-          name="zooming"
+          label="Payload"
+          name="payloadId"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input />
+          <Select />
         </Form.Item>
         <Form.Item
           label="Trạng thái"
-          name="zooming"
+          name="status"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Select>
-            <Select.Option value="demo">Demo</Select.Option>
           </Select>
+        </Form.Item>
+        <Form.Item
+          label="Mô tả"
+          name="status"
+          rules={[{ required: true, message: 'Please input your password!' }]}
+        >
+          <TextArea/>
         </Form.Item>
 
         {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
@@ -77,4 +85,4 @@ const EditPayload = ({ history }) => {
     </StyleEdit>
   );
 };
-export default EditPayload;
+export default AddSchedule;

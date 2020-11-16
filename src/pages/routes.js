@@ -3,11 +3,13 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
 import ListPayload from './Payload/PayloadManagement/List';
-import PayloadMaintenance from './Payload/PayloadMaintenance';
+import PayloadMaintenance from './Payload/PayloadMaintenance/List';
+import EditSchedule from './Payload/PayloadMaintenance/Edit';
+import AddSchedule from './Payload/PayloadMaintenance/Add';
 import PayloadSetting from './Payload/PayloadSetting';
 import PayloadStatistic from './Payload/PayloadStatistic';
 import EditPayload from './Payload/PayloadManagement/Edit';
-
+import AddPayload from './Payload/PayloadManagement/Add';
 export const routes = [
   {
     path: '/dashboard',
@@ -47,6 +49,10 @@ export const routes = [
     component: EditPayload,
   },
   {
+    path: '/add-payload',
+    component: AddPayload,
+  },
+  {
     path: '/payload-drone',
     component: () => <div>Payload - Drone</div>,
   },
@@ -57,6 +63,14 @@ export const routes = [
   {
     path: '/payload-maintenance',
     component: PayloadMaintenance,
+  },
+  {
+    path: '/edit-schedule',
+    component: EditSchedule,
+  },
+  {
+    path: '/add-schedule',
+    component: AddSchedule,
   },
   {
     path: '/payload-statistic',
