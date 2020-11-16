@@ -10,6 +10,9 @@ import PayloadSetting from './Payload/PayloadSetting';
 import PayloadStatistic from './Payload/PayloadStatistic';
 import EditPayload from './Payload/PayloadManagement/Edit';
 import AddPayload from './Payload/PayloadManagement/Add';
+import PayloadDrone from './Payload/PayloadToDrone/List';
+import EditSignupPayloadDrone from './Payload/PayloadToDrone/Edit';
+import AddSignupPayloadDrone from './Payload/PayloadToDrone/Add';
 export const routes = [
   {
     path: '/dashboard',
@@ -54,7 +57,15 @@ export const routes = [
   },
   {
     path: '/payload-drone',
-    component: () => <div>Payload - Drone</div>,
+    component: PayloadDrone,
+  },
+  {
+    path: '/edit-signup-payload-drone',
+    component: EditSignupPayloadDrone,
+  },
+  {
+    path: '/add-signup-payload-drone',
+    component: AddSignupPayloadDrone,
   },
   {
     path: '/payload-configuration',
