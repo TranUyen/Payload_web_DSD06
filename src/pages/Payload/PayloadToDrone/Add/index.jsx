@@ -37,14 +37,14 @@ const AddSignupPayloadDrone = ({ history }) => {
         <Form.Item
           label="Thời gian"
           name="time"
-          rules={[{  }]}
+          rules={[{ required: true  }]}
         >
           <DatePicker/>
           </Form.Item>
         <Form.Item
             label="Loại thiết bị"
             name="payloadId"
-            rules={[{ }]}
+            rules={[{required: true }]}
         >
             <Select>
                 <option value="camera">Camera</option>
@@ -55,7 +55,7 @@ const AddSignupPayloadDrone = ({ history }) => {
         <Form.Item
           label="Payload"
           name="payloadId"
-          rules={[{ }]}
+          rules={[{required: true }]}
         >
           <Select>
                 <option>Payload 1</option>
@@ -74,13 +74,13 @@ const AddSignupPayloadDrone = ({ history }) => {
               <option>Không hoạt động</option>
           </Select>
         </Form.Item> */}
-        <Form.Item label="Panning(Từ trái qua phải)" name ="pan" rules={[{ required: true, message: 'Please input panning!' }]}>
+        <Form.Item label="Panning(Từ trái qua phải)" name ="pan" rules={[{  message: 'Please input panning!' }]}>
           <Input placeholder="0 độ - 360 độ"></Input>
         </Form.Item>
-        <Form.Item label="Tilting(Từ trên xuống dưới)" name ="tilt" rules={[{ required: true, message: 'Please input tilting!' }]}>
+        <Form.Item label="Tilting(Từ trên xuống dưới)" name ="tilt" rules={[{  message: 'Please input tilting!' }]}>
           <Input placeholder="0 độ - 360 độ"></Input>
         </Form.Item>
-        <Form.Item label="Zooming" name ="zoom" rules={[{ required: true, message: 'Please input zooming!' }]}>
+        <Form.Item label="Zooming" name ="zoom" rules={[{  message: 'Please input zooming!' }]}>
           <Input placeholder="2.0 Megapixel trở lên"></Input>
         </Form.Item>
         <Form.Item label="Auto Tracking" name ="tracking" rules={[{ }]}>
@@ -93,6 +93,13 @@ const AddSignupPayloadDrone = ({ history }) => {
           <Select>
             <option >Bật</option>
             <option>Tắt</option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Drone" name ="drone" rules={[{ required: true }]}>
+          <Select>
+            <option>Drone 1</option>
+            <option>Drone 2</option>
+            <option>Drone 3</option>
           </Select>
         </Form.Item>
         <Form.Item
