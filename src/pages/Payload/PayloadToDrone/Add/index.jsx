@@ -37,14 +37,14 @@ const AddSignupPayloadDrone = ({ history }) => {
         <Form.Item
           label="Thời gian"
           name="time"
-          rules={[{ required: true, message: 'Please input your username!' }]}
+          rules={[{  }]}
         >
           <DatePicker/>
           </Form.Item>
         <Form.Item
             label="Loại thiết bị"
             name="payloadId"
-            rules={[{ required: true, message: 'Please input your password!' }]}
+            rules={[{ }]}
         >
             <Select>
                 <option value="camera">Camera</option>
@@ -55,7 +55,7 @@ const AddSignupPayloadDrone = ({ history }) => {
         <Form.Item
           label="Payload"
           name="payloadId"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          rules={[{ }]}
         >
           <Select>
                 <option>Payload 1</option>
@@ -64,7 +64,7 @@ const AddSignupPayloadDrone = ({ history }) => {
 
             </Select>
         </Form.Item>
-        <Form.Item
+        {/* <Form.Item
           label="Trạng thái"
           name="status"
           rules={[{ required: true, message: 'Please input your password!' }]}
@@ -72,6 +72,27 @@ const AddSignupPayloadDrone = ({ history }) => {
           <Select>
               <option>Hoạt động</option>
               <option>Không hoạt động</option>
+          </Select>
+        </Form.Item> */}
+        <Form.Item label="Panning(Từ trái qua phải)" name ="pan" rules={[{ required: true, message: 'Please input panning!' }]}>
+          <Input placeholder="0 độ - 360 độ"></Input>
+        </Form.Item>
+        <Form.Item label="Tilting(Từ trên xuống dưới)" name ="tilt" rules={[{ required: true, message: 'Please input tilting!' }]}>
+          <Input placeholder="0 độ - 360 độ"></Input>
+        </Form.Item>
+        <Form.Item label="Zooming" name ="zoom" rules={[{ required: true, message: 'Please input zooming!' }]}>
+          <Input placeholder="2.0 Megapixel trở lên"></Input>
+        </Form.Item>
+        <Form.Item label="Auto Tracking" name ="tracking" rules={[{ }]}>
+          <Select>
+            <option >Bật tự động theo dõi</option>
+            <option>Tắt tự động theo dõi</option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Shoot interval" name ="shoot" rules={[{  }]}>
+          <Select>
+            <option >Bật</option>
+            <option>Tắt</option>
           </Select>
         </Form.Item>
         <Form.Item
